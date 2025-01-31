@@ -1,0 +1,45 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@model prelimproj.Models.CalculatorModel
+<body style="background: linear-gradient(to bottom right, #d6e4ff, #6ca0dc); font-family: Arial, sans-serif;">
+
+    <div style="max-width: 440px; margin: 0 auto; text-align: center; font-family: Arial, sans-serif;">
+        <div style="padding: 28px; margin-top: 40px; border: 2px solid #77797a; border-radius: 10px; background-color: #dcdee0;">
+            <div style="margin-bottom: 20px; padding: 15px; font-size: 25px; text-align: right; border: 2px solid #77797a; border-radius: 6px; background-color: #fff;">
+                @Model.Display
+            </div>
+            <form asp-action="Calculate" method="post">
+                <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px;">
+                    <button name="button" value="%" style="padding: 20px; font-size: 15px; border: 2px solid #77797a; border-radius: 6px; background-color: #ffdf80; color: #704400;">%</button>
+                    <button name="button" value="&radic;" style="padding: 20px; font-size: 15px; border: 2px solid #77797a; border-radius: 6px; background-color: #ffdf80; color: #704400;">√</button>
+                    <button name="button" value="&#x00B2;" style="padding: 20px; font-size: 15px; border: 2px solid #77797a; border-radius: 6px; background-color: #ffdf80; color: #704400;">x²</button>
+                    <button name="button" value="&#x232B;" style="padding: 20px; font-size: 15px; border: 2px solid #77797a; border-radius: 6px; background-color: #fcc2c2; color: #c00000;">⌫</button>
+
+                    <button name="button" value="7" style="padding: 20px; font-size: 15px; border: 2px solid #77797a; border-radius: 6px; background-color: #adc0ff;">7</button>
+                    <button name="button" value="8" style="padding: 20px; font-size: 15px; border: 2px solid #77797a; border-radius: 6px; background-color: #adc0ff;">8</button>
+                    <button name="button" value="9" style="padding: 20px; font-size: 15px; border: 2px solid #77797a; border-radius: 6px; background-color: #adc0ff;">9</button>
+                    <button name="button" value="/" style="padding: 20px; font-size: 15px; border: 2px solid #77797a; border-radius: 6px; background-color: #fcc2c2; color: #c00000;">/</button>
+
+                    <button name="button" value="4" style="padding: 20px; font-size: 15px; border: 2px solid #77797a; border-radius: 6px; background-color: #adc0ff;">4</button>
+                    <button name="button" value="5" style="padding: 20px; font-size: 15px; border: 2px solid #77797a; border-radius: 6px; background-color: #adc0ff;">5</button>
+                    <button name="button" value="6" style="padding: 20px; font-size: 15px; border: 2px solid #77797a; border-radius: 6px; background-color: #adc0ff;">6</button>
+                    <button name="button" value="*" style="padding: 20px; font-size: 15px; border: 2px solid #77797a; border-radius: 6px; background-color: #fcc2c2; color: #c00000;">*</button>
+
+                    <button name="button" value="1" style="padding: 20px; font-size: 15px; border: 2px solid #77797a; border-radius: 6px; background-color: #adc0ff;">1</button>
+                    <button name="button" value="2" style="padding: 20px; font-size: 15px; border: 2px solid #77797a; border-radius: 6px; background-color: #adc0ff;">2</button>
+                    <button name="button" value="3" style="padding: 20px; font-size: 15px; border: 2px solid #77797a; border-radius: 6px; background-color: #adc0ff;">3</button>
+                    <button name="button" value="-" style="padding: 20px; font-size: 15px; border: 2px solid #77797a; border-radius: 6px; background-color: #fcc2c2; color: #c00000;">-</button>
+
+                    <button name="button" value="C" style="padding: 20px; font-size: 15px; border: 2px solid #77797a; border-radius: 6px; background-color: #ff8080; color: #600000;">C</button>
+                    <button name="button" value="0" style="padding: 20px; font-size: 15px; border: 2px solid #77797a; border-radius: 6px; background-color: #adc0ff;">0</button>
+                    <button name="button" value="." style="padding: 20px; font-size: 15px; border: 2px solid #77797a; border-radius: 6px; background-color: #a5fabe; color: #006c00;">.</button>
+                    <button name="button" value="+" style="padding: 20px; font-size: 15px; border: 2px solid #77797a; border-radius: 6px; background-color: #fcc2c2; color: #c00000;">+</button>
+
+                    <button name="button" value="=" style="grid-column: span 4; padding: 20px; font-size: 20px; border: 2px solid #77797a; border-radius: 6px; background-color: #009688; color: white; font-weight: bold;">=</button>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</body>
